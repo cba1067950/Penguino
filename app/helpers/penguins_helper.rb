@@ -1,0 +1,2 @@
+module PenguinsHelper
+end

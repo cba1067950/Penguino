@@ -1,0 +1,10 @@
+<h1>  <%= @colony.name %> </h1>
+
+<h4> Penguinos</h4>
+<ul>
+  <% @penguins.each do |penguin| %>
+  <li>
+    <%= link_to penguin.name, penguin %>
+  </li>
+  <% end %>
+</ul>
