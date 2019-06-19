@@ -1,16 +1,26 @@
-<h1> <%= @scientist.name %> </h1>
+<div class="" align="left" margin: 0 0 $small-spacing;>
+  <h1> <%= @scientist.name %> </h1>
 
-<h4>Age</h4>
-<p> <%= @scientist.age %> </p>
+  <%= form_tag({controller: "scientists", action: "edit"}, method: :get) do %>
+  <%= submit_tag "Edit #{@scientist.name}" %>
+  <% end %>
+  <%= form_for @scientist, method: :delete do %>
+  <%= submit_tag "Delete #{@scientist.name}" %>
+  <% end %>
 
-<h4>Bio</h4>
-<p> <%= @scientist.bio %> </p>
 
-<h4>Records</h4>
-<ul>
-  <% @records.each do |record| %>
-  <li>
-    <%= link_to record.project_name, record %>  
-  </li>
-  <% end  %>
-</ul>
+  <h4>Age</h4>
+  <p> <%= @scientist.age %> </p>
+
+  <h4>Bio</h4>
+  <p> <%= @scientist.bio %> </p>
+
+  <h4>Records</h4>
+  <ul>
+    <% @records.each do |record| %>
+    <li>
+      <%= link_to record.project_name, record %>
+    </li>
+    <% end  %>
+  </ul>
+</div>

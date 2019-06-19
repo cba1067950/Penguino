@@ -1,5 +1,16 @@
 <h1> <%= @record.project_name %> </h1>
 
+<%= form_tag({controller: "scientists", action: "show"}, method: :get) do %>
+<%= submit_tag "Return to scientist" %>
+<% end %>
+<%= form_tag({controller: "records", action: "edit"}, method: :get) do %>
+<%= submit_tag "Edit #{@record.project_name}" %>
+<% end %>
+<%= form_for @record, method: :delete do %>
+<%= submit_tag "Delete #{@record.project_name}" %>
+<% end %>
+
+<br>
 <h4>Colony</h4>
 <p> <%= link_to @record.colony.name, @record.colony %> </p>
 

@@ -1,0 +1,11 @@
+<h1>Edit <%= @scientist.name %>'s profile</h1>
+
+<%= form_for @scientist do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.number_field :age %>
+<%= f.label :bio %>
+<%= f.text_area :bio %>
+<%= f.submit "Submit Updates?" %>
+<% end %>
