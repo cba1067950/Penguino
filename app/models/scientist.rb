@@ -1,4 +1,5 @@
 class Scientist < ApplicationRecord
+  has_secure_password
   has_many :records
   has_many :colonies, through: :records
 

@@ -12,13 +12,6 @@
   </li>
   <% end %>
 </ul>
-
-<%= form_tag({controller: "records", action: "show"}, method: :get) do %>
-<%= submit_tag "Return to records" %>
-<% end %>
-<%= form_tag({controller: "colonies", action: "edit"}, method: :get) do %>
-<%= submit_tag "Edit #{@colony.name}" %>
-<% end %>
-<%= form_for @colony, method: :delete do %>
-<%= submit_tag "Delete #{@colony.name}" %>
-<% end %>
+<br> 
+<%= button_to "Edit #{@colony.name}", edit_colony_path(@colony), method: :get %>
+<%= button_to "Delete #{@colony.name}", @colony, method: :delete %>

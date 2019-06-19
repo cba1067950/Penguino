@@ -1,30 +1,18 @@
 <div class="" align="left" margin: 0 0 $small-spacing;>
-  <h1> <%= @scientist.name %> </h1>
 
-  <%= form_tag({controller: "scientists", action: "edit"}, method: :get) do %>
-  <%= submit_tag "Edit #{@scientist.name}" %>
-  <% end %>
-  <%= form_for @scientist, method: :delete do %>
-  <%= submit_tag "Delete #{@scientist.name}" %>
-  <% end %>
+  <h1> <%= @current_scientist.name %> </h1>
 
 
-<<<<<<< HEAD
+
+
 <%= button_to "Create A Colony", new_colony_path, method: :get %>
-=======
   <h4>Age</h4>
-  <p> <%= @scientist.age %> </p>
+  <p> <%= @current_scientist.age %> </p>
 
   <h4>Bio</h4>
-  <p> <%= @scientist.bio %> </p>
-
-  <h4>Records</h4>
-  <ul>
-    <% @records.each do |record| %>
-    <li>
-      <%= link_to record.project_name, record %>
-    </li>
-    <% end  %>
-  </ul>
+  <p> <%= @current_scientist.bio %> </p>
 </div>
->>>>>>> master
+<br>
+
+<%= button_to "Edit #{@current_scientist.name}", edit_scientist_path(@current_scientist), method: :get %>
+<%= button_to "Delete #{@current_scientist.name}", @colony, method: :delete %>

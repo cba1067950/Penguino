@@ -23,6 +23,8 @@
 <%= form_tag({controller: "records", action: "edit"}, method: :get) do %>
 <%= submit_tag "Edit #{@record.project_name}" %>
 <% end %>
+
+
 <%= form_for @record, method: :delete do %>
 <%= submit_tag "Delete #{@record.project_name}" %>
 <% end %>

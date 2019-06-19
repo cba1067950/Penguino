@@ -27,8 +27,8 @@ class ColoniesController < ApplicationController
 
   def destroy
     @colony = Colony.find(params[:id])
-    # @penguin.destroy
-    redirect_to '/login'
+    @colony.destroy
+    redirect_to @current_scientist
   end
 
   private

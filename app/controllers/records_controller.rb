@@ -1,4 +1,7 @@
 class RecordsController < ApplicationController
+  def index
+    @records = @current_scientist.records
+  end
 
   def show
     @record = Record.find(params[:id])
@@ -7,9 +10,18 @@ class RecordsController < ApplicationController
   end
 
   def new
-    @scientist = Scientist.find(params[:id])
     @record = Record.new
     @colonies = Colony.all
+  end
+
+  def create
+    @record = @current_scientist.records.create(record_strong_params)
+    if @record.valid?
+      redirect_to @record
+    else
+      flash[:errors] = @record.errors.full_messages
+      redirect_to new_record_path
+    end
   end
 
   def edit
@@ -18,20 +30,24 @@ class RecordsController < ApplicationController
 
   def update
     @record = Record.find(params[:id])
-    @record.update(strong_params)
+    @record.update(update_record_params)
     redirect_to record_path(@record)
   end
 
   def destroy
-    @scientist = Scientist.find(params[:id])
-    # @scientist.destroy
-    redirect_to login
+    @record = Record.find(params[:id])
+    @scientist = @record.scientist
+    # @record.destroy
+    redirect_to scientist_records_path(@scientist)
   end
 
   private
 
-  def strong_params
+  def update_record_params
     params.require(:record).permit(:project_name, :location)
   end
 
+  def record_strong_params
+    params.require(:record).permit(:project_name, :location, :colony_id)
+  end
 end

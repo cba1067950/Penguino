@@ -17,6 +17,7 @@ class PenguinsController < ApplicationController
 
   def edit
     @penguin = Penguin.find(params[:id])
+    @colonies = Colony.all
   end
 
   def update
@@ -27,8 +28,9 @@ class PenguinsController < ApplicationController
 
   def destroy
     @penguin = Penguin.find(params[:id])
-    # @penguin.destroy
-    redirect_to '/records'
+    colony = @penguin.colony
+    @penguin.destroy
+    redirect_to colony_path(colony)
   end
 
   private

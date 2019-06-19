@@ -1,3 +1,9 @@
 <h1>HELLOOO</h1>
 
-<img src="https://media2.giphy.com/media/6Ek7hFsg6fhQmf8UNr/source.gif" alt="penguin" height="440" width="440"> 
+<!-- <img src="https://media2.giphy.com/media/6Ek7hFsg6fhQmf8UNr/source.gif" alt="penguin" height="440" width="440">  -->
+<% if flash[:errors] %>
+  <%= flash[:errors] %>
+<% end %>
+
+<%= button_to "Login", new_login_path, method: :get %>
+<%= button_to "Create User", new_scientist_path, method: :get %>

@@ -1,6 +1,6 @@
-<h1>Edit <%= @scientist.name %>'s profile</h1>
+<h1>Edit <%= @current_scientist.name %>'s profile</h1>
 
-<%= form_for @scientist do |f| %>
+<%= form_for @current_scientist do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
 <%= f.label :age %>
