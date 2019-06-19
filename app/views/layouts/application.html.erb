@@ -10,6 +10,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class='container'>
+      <p align="center"><%= image_tag "guin.jpg", class: "guin_logo" %></p>
+      <h1 align='center' style='font-size:3rem;color:#6666DD'>Penguino</h1>
+      <%= yield %>
+    </div>
   </body>
 </html>

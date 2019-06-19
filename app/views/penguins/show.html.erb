@@ -1,5 +1,16 @@
 <h1> <%= @penguin.name %> </h1>
 
+<%= form_tag({controller: "colonies", action: "show"}, method: :get) do %>
+<%= submit_tag "Return to colony" %>
+<% end %>
+<%= form_tag({controller: "penguins", action: "edit"}, method: :get) do %>
+<%= submit_tag "Edit #{@penguin.name}" %>
+<% end %>
+<%= form_for @penguin, method: :delete do %>
+<%= submit_tag "Delete #{@penguin.name}" %>
+<% end %>
+
+<br>
 <ul> About Me
   <li>Title: <%= @penguin.title %></li>
   <li>Temperament: <%= @penguin.temp %></li>
