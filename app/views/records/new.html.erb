@@ -1,0 +1,11 @@
+<h1>TEST NEW RECORDS</h1>
+
+<%= form_for @record, url: new_record_path(@scientist.id) do |f| %>
+  <%= f.label "Project Name" %>
+    <%= f.text_field :project_name %><br>
+  <%= f.label "Colony" %>
+    <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
+  <%= f.label "Location" %>
+    <%=  f.text_field :location%><br>
+  <%= f.submit %>
+<% end  %>

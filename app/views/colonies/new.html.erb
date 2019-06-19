@@ -1,0 +1,10 @@
+<h1>NEW COLONY FORM</h1>
+<br>
+<%= form_for @colony do |f|%>
+  <%= f.label "Name" %>
+    <%= f.text_field :name %><br>
+  <%= f.label "Active" %>
+    <%=  f.check_box :active%><br>
+    <br>
+  <%= f.submit %>
+<% end  %>

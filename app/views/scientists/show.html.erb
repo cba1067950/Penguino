@@ -6,11 +6,4 @@
 <h4>Bio</h4>
 <p> <%= @scientist.bio %> </p>
 
-<h4>Records</h4>
-<ul>
-  <% @records.each do |record| %>
-  <li>
-    <%= link_to record.project_name, record %>  
-  </li>
-  <% end  %>
-</ul>
+<%= button_to "Create A Colony", new_colony_path, method: :get %>
