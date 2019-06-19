@@ -4,13 +4,24 @@ class PenguinsController < ApplicationController
     @penguin = Penguin.find(params[:id])
   end
 
+  def new
+    @penguin = Penguin.new
+    @colonies = Colony.all
+  end
+
+  def create
+    penguin = Penguin.create(penguin_params)
+    redirect_to penguin
+  end
+
+
   def edit
     @penguin = Penguin.find(params[:id])
   end
 
   def update
     @penguin = Penguin.find(params[:id])
-    @penguin.update(strong_params)
+    @penguin.update(edit_strong_params)
     redirect_to penguin_path(@penguin)
   end
 
@@ -22,8 +33,12 @@ class PenguinsController < ApplicationController
 
   private
 
-  def strong_params
+  def edit_strong_params
     params.require(:penguin).permit(:name, :title, :temp, :alive, :species)
+  end
+
+  def penguin_params
+    params.require(:penguin).permit(:name, :title, :temp, :alive, :species, :colony_id)
   end
 
 end

@@ -14,12 +14,7 @@
 <ul> About Me
   <li>Title: <%= @penguin.title %></li>
   <li>Temperament: <%= @penguin.temp %></li>
-  <li>Status:
-    <% if @penguin.alive == true %>
-      <%= "Alive" %>
-    <% else @penguin.alive == true %>
-      <%= "Dead" %>
-    <% end %>
-  </li>
+  <li>Status: <%= @penguin.alive_or_dead %></li>
   <li>Species: <%= @penguin.species %></li>
+  <li>Colony: <%= link_to @penguin.colony.name, @penguin.colony %> </li>
 </ul>

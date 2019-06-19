@@ -5,6 +5,16 @@ class ColoniesController < ApplicationController
     @penguins = @colony.penguins
   end
 
+  def new
+    @colony = Colony.new
+  end
+
+  def create
+    colony = Colony.create(strong_params)
+    #check validations and add flasherrors#
+    redirect_to colony
+  end
+
   def edit
     @colony = Colony.find(params[:id])
   end
@@ -24,7 +34,7 @@ class ColoniesController < ApplicationController
   private
 
   def strong_params
-    params.require(:colony).permit(:name)
+    params.require(:colony).permit(:name, :active)
   end
 
 end

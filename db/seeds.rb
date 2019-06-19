@@ -9,8 +9,8 @@
 scientist1 = Scientist.create(name: "Daniela", age: "24", bio: "i actually like cats", username: "daniela", password: "cats123")
 scientist2 = Scientist.create(name: "Joe", age: "33", bio: "i love birds, but dont wanna live with them", username: "joe", password: "birds123")
 
-colony1 = Colony.create(name: "Penguin Colony")
-colony2 = Colony.create(name: "Deli Colony")
+colony1 = Colony.create(name: "Penguin Colony", active: true)
+colony2 = Colony.create(name: "Deli Colony", active: true)
 
 penguin1 = Penguin.create(name: "Terminator", title: "general", temp: "nice", alive: true, species: "emperor penguin", colony_id: colony1.id)
 penguin1 = Penguin.create(name: "Hulk Hogan", title: "lord", temp: "evil", alive: true, species: "deli penguin", colony_id: colony2.id)

@@ -1,5 +1,22 @@
 <h1> <%= @record.project_name %> </h1>
 
+<h4> Location </h4>
+<p> <%= @record.location %> </p>
+
+<h4>Colony Information</h4>
+<p>Name: <%= link_to @colony.name, @colony %> </p>
+
+<p>Status:  <%= @colony.active_or_not %> </p>
+<p>Penguin Count: <%= @colony.penguin_count %> </p>
+<p>Penguins: </p>
+<ul>
+  <% @penguins.each do |penguin| %>
+  <li>
+    <%= link_to penguin.name, penguin %> | <%= penguin.alive_or_dead %>
+  </li>
+  <% end %>
+</ul>
+
 <%= form_tag({controller: "scientists", action: "show"}, method: :get) do %>
 <%= submit_tag "Return to scientist" %>
 <% end %>
@@ -9,11 +26,3 @@
 <%= form_for @record, method: :delete do %>
 <%= submit_tag "Delete #{@record.project_name}" %>
 <% end %>
-
-<br>
-<h4>Colony</h4>
-<p> <%= link_to @record.colony.name, @record.colony %> </p>
-
-<h4> Location </h4>
-
-<p> <%= @record.location %> </p>
