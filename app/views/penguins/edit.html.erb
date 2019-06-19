@@ -1,0 +1,17 @@
+<h1>Edit <%= @penguin.name %></h1>
+
+<p>
+  <%= form_for @penguin do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :temp, "Temperament" %>
+  <%= f.text_field :temp %>
+  <%= f.label :alive %>
+  <%= f.text_field :alive %>
+  <%= f.label :species  %>
+  <%= f.text_field :species %>
+  <%= f.submit %>
+  <% end %>
+</p>

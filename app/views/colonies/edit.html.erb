@@ -1,0 +1,9 @@
+<h1>Edit <%= @colony.name %></h1>
+
+<p>
+  <%= form_for @colony do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+  <% end %>
+</p>

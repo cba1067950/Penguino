@@ -1,7 +1,19 @@
 <h1>  <%= @colony.name %> </h1>
 
+<%= form_tag({controller: "records", action: "show"}, method: :get) do %>
+<%= submit_tag "Return to records" %>
+<% end %>
+<%= form_tag({controller: "colonies", action: "edit"}, method: :get) do %>
+<%= submit_tag "Edit #{@colony.name}" %>
+<% end %>
+<%= form_for @colony, method: :delete do %>
+<%= submit_tag "Delete #{@colony.name}" %>
+<% end %>
+
+<br>
 <h4> Penguinos</h4>
 <ul>
+  <li><%= link_to "Add Penguin", new_penguin_path %></li>
   <% @penguins.each do |penguin| %>
   <li>
     <%= link_to penguin.name, penguin %>
