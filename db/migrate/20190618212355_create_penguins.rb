@@ -2,6 +2,7 @@ class CreatePenguins < ActiveRecord::Migration[5.2]
   def change
     create_table :penguins do |t|
       t.string :name
+      t.string :image_url
       t.string :title
       t.string :temp
       t.boolean :alive

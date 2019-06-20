@@ -1,4 +1,16 @@
 <h1>NEW COLONY FORM</h1>
+
+<% if flash[:errors] %>
+  <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li>
+          <%= error %>
+        </li>
+      <%end %>
+    </ul>
+<% end  %>
+
 <br>
 <%= form_for @colony do |f|%>
   <%= f.label "Name" %>

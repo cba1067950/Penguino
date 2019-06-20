@@ -4,14 +4,21 @@
 
 <br>
 <h4> Penguinos</h4>
-<ul>
-  <li><%= link_to "Add Penguin", new_penguin_path %></li>
+
+<ul class="cards">
+
   <% @penguins.each do |penguin| %>
-  <li>
-    <%= link_to penguin.name, penguin %>
-  </li>
+    <li class="card">
+      <img src="<%= penguin.image_url %>" class="peng_img">
+      <span class="peng_name"><%= link_to penguin.name, penguin %></span>
+      <span class="peng_status"><%= penguin.alive_or_dead %>
+    <li>
   <% end %>
 </ul>
-<br> 
+
+<br>
+<%= button_to "Add Penguin", new_penguin_path, method: :get %>
+<br>
+
 <%= button_to "Edit #{@colony.name}", edit_colony_path(@colony), method: :get %>
 <%= button_to "Delete #{@colony.name}", @colony, method: :delete %>

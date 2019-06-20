@@ -1,10 +1,15 @@
 <h1>TEST NEW RECORDS</h1>
 
 <% if flash[:errors] %>
-  <% flash[:errors].each do |error| %>
-    <li><%= error %></li>
-  <% end %>
-<% end %>
+  <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li>
+          <%= error %>
+        </li>
+      <%end %>
+    </ul>
+<% end  %>
 
 <%= form_for @record do |f| %>
   <%= f.label "Project Name" %>

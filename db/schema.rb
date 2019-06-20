@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_212454) do
 
   create_table "penguins", force: :cascade do |t|
     t.string "name"
+    t.string "image_url"
     t.string "title"
     t.string "temp"
     t.boolean "alive"
