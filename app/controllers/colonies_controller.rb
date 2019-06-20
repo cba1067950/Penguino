@@ -11,12 +11,11 @@ class ColoniesController < ApplicationController
 
   def create
     @colony = Colony.create(strong_params)
-      if @colony.valid?
-        redirect_to @colony
-      else
-        flash[:errors] = @colony.errors.full_messages
-        redirect_to new_colony_path
-      end
+    if @colony.valid?
+      redirect_to @colony
+    else
+      flash[:errors] = @colony.errors.full_messages
+      redirect_to new_colony_path
     end
   end
 
