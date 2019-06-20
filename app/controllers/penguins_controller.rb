@@ -11,7 +11,13 @@ class PenguinsController < ApplicationController
 
   def create
     penguin = Penguin.create(penguin_params)
-    redirect_to penguin
+    if penguin.valid?
+      penguin.update(image_url: penguin.assign_image)
+      redirect_to penguin
+    else
+      flash[:errors] = penguin.errors.full_messages
+      redirect_to new_penguin_path
+    end
   end
 
 
