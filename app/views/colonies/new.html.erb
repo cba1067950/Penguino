@@ -1,4 +1,4 @@
-<h1>NEW COLONY FORM</h1>
+<div class="the_forms">
 
 <% if flash[:errors] %>
   <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
@@ -10,13 +10,14 @@
       <%end %>
     </ul>
 <% end  %>
-
 <br>
-<%= form_for @colony do |f|%>
-  <%= f.label "Name" %>
-    <%= f.text_field :name %><br>
-  <%= f.label "Active" %>
-    <%=  f.check_box :active%><br>
-    <br>
-  <%= f.submit %>
-<% end  %>
+
+<h1>NEW COLONY FORM</h1>
+  <%= form_for @colony do |f|%>
+    <%= f.label "Name" %><br>
+      <%= f.text_field :name %><br>
+    <%= f.label "Active" %><br>
+      <%=  f.check_box :active%><br>
+    <%= f.submit %>
+  <% end  %>
+</div>

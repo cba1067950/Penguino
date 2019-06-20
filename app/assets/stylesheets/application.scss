@@ -31,11 +31,40 @@
 }
 
 li, a, button {
-  font-family: "Times New Roman", sans-serif;
+  font-family: monospace;
   font-weight: 400;
   font-size: 16px;
   color: #111111;
   text-decoration: none;
+}
+
+h1, h4, p {
+  text-align: center;
+  font-family: monospace;
+  font-size: 76px;
+  font-weight: 400;
+  color: #111111;
+}
+
+h4 {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 50px;
+}
+
+p {
+  text-align: left;
+  margin-left: 40px;
+  font-size: 30px;
+}
+
+.peng_profile {
+  height: 40%;
+  zoom: 0.6;
+}
+
+.peng_profile_2 {
+  font-size: 30px;
 }
 
 .logo_link {
@@ -156,9 +185,14 @@ button:hover {
 }
 
 .profile_pic {
-  width: 300px;
+  height: 400px;
+  width: auto;
+  padding: 20px;
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.4);
   border-radius: 30px;
+  background-color: white;
+  background-image: linear-gradient(#D3FCF9, #CEC7E3);
+  background-blend-mode: multiply;
   // border-style: solid;
   // border-width: medium;
   // height: 300px;
@@ -170,6 +204,32 @@ button:hover {
   margin: 0px 10px;
 }
 
+.the_forms {
+  flex-direction: column;
+  margin: auto;
+}
+
+.new_penguin, .new_colony, .new_record {
+  justify-content: center;
+  text-align: center;
+}
+
+// .new_colony {
+//     justify-content: center;
+//     text-align: center;
+// }
+
+label {
+font-family: monospace;
+font-size: x-large;
+}
+
+input {
+  height: 40px;
+  font-size: 30px;
+  font-family: monospace;
+  margin: 10px 0px;
+}
 
 // This fixes the buttons to the top
 .icon-bar {
@@ -196,6 +256,7 @@ button:hover {
   border-radius: 90px;
   // color: white;
   // font-size: 20px;
+  overflow:hidden;
 }
 
 .icon-bar a:hover {

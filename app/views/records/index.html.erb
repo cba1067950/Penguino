@@ -1,10 +1,16 @@
-<h1>Records</h1>
-<ul>
-  <% @records.each do |record| %>
-  <li>
-    <%= link_to record.project_name, record %>
-  </li>
-  <% end  %>
-</ul>
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('adam_penguin.jpeg'), :class => "edit_btn"), new_record_path %>
+  </div>
+</div>
 
-<%= button_to "Create New Record", new_record_path, method: :get %>
+<div class="three">
+  <h1>Records</h1>
+  <ul>
+    <% @records.each do |record| %>
+    <li>
+      <%= link_to record.project_name, record %>
+    </li>
+    <% end  %>
+  </ul>
+</div>

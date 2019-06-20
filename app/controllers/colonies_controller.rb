@@ -1,5 +1,9 @@
 class ColoniesController < ApplicationController
 
+  def index
+    @colonies = @current_scientist.colonies
+  end
+
   def show
     @colony = Colony.find(params[:id])
     @penguins = @colony.penguins

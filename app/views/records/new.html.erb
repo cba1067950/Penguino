@@ -1,3 +1,4 @@
+<div class="the_forms">
 <h1>TEST NEW RECORDS</h1>
 
 <% if flash[:errors] %>
@@ -10,13 +11,14 @@
       <%end %>
     </ul>
 <% end  %>
-
-<%= form_for @record do |f| %>
-  <%= f.label "Project Name" %>
-    <%= f.text_field :project_name %><br>
-  <%= f.label "Colony" %>
-    <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
-  <%= f.label "Location" %>
-    <%=  f.text_field :location%><br>
-  <%= f.submit %>
-<% end  %>
+  <%= form_for @record do |f| %>
+    <%= f.label "Project Name" %><br>
+      <%= f.text_field :project_name %><br>
+    <%= f.label "Colony" %><br>
+      <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
+    <%= f.label "Location" %><br>
+      <%=  f.text_field :location%><br>
+      <br>
+    <%= f.submit %>
+  <% end  %>
+</div>

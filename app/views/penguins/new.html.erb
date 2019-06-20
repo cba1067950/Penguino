@@ -1,34 +1,35 @@
-<h1>Make A Penguin</h1>
-<% if flash[:errors] %>
-  <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
-    <ul>
-      <% flash[:errors].each do |error| %>
-        <li>
-          <%= error %>
-        </li>
-      <%end %>
-    </ul>
-<% end  %>
-<br>
+<div class="the_forms">
+  <h1>Make A Penguin</h1>
+  <% if flash[:errors] %>
+    <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li>
+            <%= error %>
+          </li>
+        <%end %>
+      </ul>
+  <% end  %>
+  <br>
 
-<%= form_for @penguin do |f| %>
-<%= f.label "Name" %>
-  <%= f.text_field :name %><br>
-  <br>
-<%= f.label "Title" %>
-  <%= f.text_field :title %><br>
-  <br>
-<%= f.label "Temperament" %>
-  <%= f.text_field :temp %><br>
-  <br>
-<%= f.label "Alive" %>
-  <%= f.check_box :alive %><br>
-  <br>
-<%= f.label "Species" %>
-  <%= f.text_field :species %><br>
-  <br>
-<%= f.label "Colony" %>
-  <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
-  <br>
-<%= f.submit %>
-<% end  %>
+  <%= form_for @penguin do |f| %>
+  <%= f.label "Name" %><br>
+    <%= f.text_field :name %><br>
+    <br>
+  <%= f.label "Title" %><br>
+    <%= f.text_field :title %><br>
+    <br>
+  <%= f.label "Temperament" %><br>
+    <%= f.text_field :temp %><br>
+    <br>
+  <%= f.label "Alive" %><br>
+    <%= f.check_box :alive %><br>
+    <br>
+  <%= f.label "Species" %><br>
+    <%= f.text_field :species %><br>
+    <br>
+  <%= f.label "Colony" %><br>
+    <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
+  <%= f.submit %>
+  <% end  %>
+</div>

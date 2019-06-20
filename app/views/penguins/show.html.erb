@@ -1,11 +1,7 @@
 <div class="one">
   <div class="icon-bar">
-    <%= link_to "delete", {method: :delete} do %>
-      <%= image_tag(('delete_guin1.png'), :class => "edit_btn") %>
-    <% end %>
-    <%= link_to "edit", {method: :get} do %>
-      <%= image_tag(('edit_guin1.png'), :class => "edit_btn") %>
-    <% end %>
+    <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), penguin_path(@penguin), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
+    <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_penguin_path(@penguin) %>
   </div>
 </div>
 
@@ -15,13 +11,22 @@
 
 <div class="three">
   <h1> <%= @penguin.name %> </h1>
-  <br>
-  <ul class="profile_ul"> About Me
-    <li>Title: <%= @penguin.title %></li>
-    <li>Temperament: <%= @penguin.temp %></li>
-    <li>Status: <%= @penguin.alive_or_dead %></li>
-    <li>Species: <%= @penguin.species %></li>
-    <li>Colony: <%= link_to @penguin.colony.name, @penguin.colony %> </li>
-  </ul>
+  <div class="peng_profile">
 
+    <h4>Title</h4>
+    <p><%= @penguin.title %></p>
+
+    <h4>Temperament</h4>
+    <p><%= @penguin.temp  %></p>
+
+    <h4>Status</h4>
+    <p><%= @penguin.alive_or_dead %></p>
+
+    <h4>Species</h4>
+    <p><%= @penguin.species %></p>
+
+    <h4>Colony</h4>
+    <p><%= link_to  @penguin.colony.name, @penguin.colony, class:"peng_profile_2"%></p>
+
+  </div>
 </div>

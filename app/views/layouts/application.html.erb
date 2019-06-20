@@ -8,24 +8,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <% if @current_scientist %>
       <header >
         <a href="#" class="logo_link">
           <%= image_tag "guin.jpg", class: "guin_logo" %>
-          <% if @current_scientist %>
             <%= "Logged in as #{@current_scientist.username}" %>
-          <% end %>
         </a>
         <nav>
           <ul class="nav_links">
-            <li><a href="#">Profile</a>  </li>
-            <li><a href="#">Records</a>  </li>
-            <li><a href="#">Colony</a>  </li>
-            <li><a href="#">Penguins</a>  </li>
-            <%# <%= button_to "log out yo",logout_path, method: :get  %>
-            <a href="#"> <button type="button" name="button"> Log Out </button>  </a>
+            <li><a href=" <%= scientist_path(@current_scientist)  %>   ">Profile</a>  </li>
+            <li><a href=" <%= records_path  %>   ">Records</a>  </li>
+            <li><a href=" <%= colonies_path  %>  ">Colony</a>  </li>
+            <li><a href=" <%= penguins_path  %>  ">Penguins</a>  </li>
+            <!-- <li><a href=" <%= logout_path %> ">Logout</a></li> -->
+            <a href=" <%= logout_path %>"> <button type="button" name="button"> Log Out </button> </a>
           </ul>
         </nav>
-    </header>
+      </header>
+    <% end %>
     <div class="background">
       <div class='container'>
         <%= yield %>

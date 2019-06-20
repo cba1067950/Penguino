@@ -1,0 +1,16 @@
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('edit2.png'), :class => "edit_btn"), new_colony_path %>
+  </div>
+</div>
+
+<div class="three">
+  <h1>Colonies</h1>
+  <ul>
+    <% @colonies.each do |colony| %>
+    <li>
+      <%= link_to colony.name, colony %>
+    </li>
+    <% end  %>
+  </ul>
+</div>

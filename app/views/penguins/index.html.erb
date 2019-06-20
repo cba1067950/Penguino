@@ -1,0 +1,16 @@
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('adam_penguin.jpeg'), :class => "edit_btn"), new_penguin_path %>
+  </div>
+</div>
+
+<div class="three">
+  <h1>Penguins</h1>
+  <ul>
+    <% @penguins.each do |penguin| %>
+    <li>
+      <%= link_to penguin.name, penguin %>
+    </li>
+    <% end  %>
+  </ul>
+</div>

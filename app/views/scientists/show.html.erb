@@ -1,18 +1,23 @@
-<div class="" align="left" margin: 0 0 $small-spacing;>
-
-  <h1> <%= @current_scientist.name %> </h1>
-
-
-
-
-<%= button_to "Create A Colony", new_colony_path, method: :get %>
-  <h4>Age</h4>
-  <p> <%= @current_scientist.age %> </p>
-
-  <h4>Bio</h4>
-  <p> <%= @current_scientist.bio %> </p>
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), scientist_path(@current_scientist), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
+    <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_scientist_path(@current_scientist) %>
+  </div>
 </div>
-<br>
 
-<%= button_to "Edit #{@current_scientist.name}", edit_scientist_path(@current_scientist), method: :get %>
-<%= button_to "Delete #{@current_scientist.name}", @colony, method: :delete %>
+<div class="two">
+  <%= image_tag('Man_penguin_profile.png', :class => 'profile_pic') %>
+</div>
+
+
+<div class="three">
+  <div class="" align="left" margin: 0 0 $small-spacing;>
+    <h1> <%= @current_scientist.name %> </h1>
+
+    <h4>Age</h4>
+    <p> <%= @current_scientist.age %> </p>
+
+    <h4>Bio</h4>
+    <p> <%= @current_scientist.bio %> </p>
+  </div>
+</div>
