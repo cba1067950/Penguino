@@ -1,4 +1,16 @@
 <h1>Make A Penguin</h1>
+<% if flash[:errors] %>
+  <h5>(｡•́ ⌔ •̀｡) Oh no... </h5>
+    <ul>
+      <% flash[:errors].each do |error| %>
+        <li>
+          <%= error %>
+        </li>
+      <%end %>
+    </ul>
+<% end  %>
+<br>
+
 <%= form_for @penguin do |f| %>
 <%= f.label "Name" %>
   <%= f.text_field :name %><br>
