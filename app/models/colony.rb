@@ -12,7 +12,7 @@ class Colony < ApplicationRecord
     if self.active == true
       "✅ Active"
     else
-      "❎ Inactive"
+      "❌ Inactive"
     end
   end
 

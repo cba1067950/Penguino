@@ -1,30 +1,22 @@
-<h1> <%= @record.project_name %> </h1>
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), record_path(@record), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
+    <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_record_path(@record) %>
+  </div>
+</div>
 
-<h4> Location </h4>
-<p> <%= @record.location %> </p>
+<div class="three">
+  <h1> <%= @record.project_name %> </h1>
+  <div class="peng_profile">
 
-<h4>Colony Information</h4>
-<p>Name: <%= link_to @colony.name, @colony %> </p>
+    <h4> Location </h4>
+    <p> <%= @record.location %> </p>
 
-<p>Status:  <%= @colony.active_or_not %> </p>
-<p>Penguin Count: <%= @colony.penguin_count %> </p>
-<p>Penguins: </p>
-<ul>
-  <% @penguins.each do |penguin| %>
-  <li>
-    <%= link_to penguin.name, penguin %> | <%= penguin.alive_or_dead %>
-  </li>
-  <% end %>
-</ul>
+    <h4>Colony Information</h4>
+    <p>Name: <%= link_to @colony.name, @colony, class:"peng_profile_2" %> </p>
 
-<%= form_tag({controller: "scientists", action: "show"}, method: :get) do %>
-<%= submit_tag "Return to scientist" %>
-<% end %>
-<%= form_tag({controller: "records", action: "edit"}, method: :get) do %>
-<%= submit_tag "Edit #{@record.project_name}" %>
-<% end %>
-
-
-<%= form_for @record, method: :delete do %>
-<%= submit_tag "Delete #{@record.project_name}" %>
-<% end %>
+    <p>Status:  <%= @colony.active_or_not %> </p>
+    <p>Penguin Count: <%= @colony.penguin_count %> </p>
+  
+  </div>
+</div>

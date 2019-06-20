@@ -1,7 +1,7 @@
 class ColoniesController < ApplicationController
 
   def index
-    @colonies = @current_scientist.colonies
+    @colonies = @current_scientist.colonies.uniq
   end
 
   def show

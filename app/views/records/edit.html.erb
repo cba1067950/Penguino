@@ -1,11 +1,13 @@
-<h1>Edit <%= @record.project_name %></h1>
+<div class="the_forms">
+  <h1>Edit <%= @record.project_name %></h1>
 
-<p>
-  <%= form_for @record do |f| %>
-  <%= f.label :project_name %>
-  <%= f.text_field :project_name %>
-  <%= f.label :location %>
-  <%= f.text_field :location %>
-  <%= f.submit %>
-  <% end %>
-</p>
+  <p>
+    <%= form_for @record do |f| %>
+    <%= f.label :project_name %><br>
+    <%= f.text_field :project_name %><br>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %><br>
+    <%= f.submit %>
+    <% end %>
+  </p>
+</div>

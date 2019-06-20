@@ -67,6 +67,12 @@ p {
   font-size: 30px;
 }
 
+.the_errors {
+  list-style: none;
+  font-size: 12px;
+  zoom: 0.9;
+}
+
 .logo_link {
   cursor: pointer;
   margin-right: auto;
@@ -209,7 +215,7 @@ button:hover {
   margin: auto;
 }
 
-.new_penguin, .new_colony, .new_record {
+.new_scientist, .new_penguin, .new_colony, .new_record, .new_login, .edit_colony, .edit_penguin, .edit_record, .edit_scientist {
   justify-content: center;
   text-align: center;
 }

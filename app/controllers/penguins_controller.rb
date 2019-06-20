@@ -3,7 +3,7 @@ class PenguinsController < ApplicationController
   def index
     @penguins = []
     @current_scientist.colonies.select {|colony| @penguins << colony.penguins }
-    @penguins = @penguins.flatten
+    @penguins = @penguins.flatten.uniq
   end
 
   def show

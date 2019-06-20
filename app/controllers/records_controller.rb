@@ -36,9 +36,9 @@ class RecordsController < ApplicationController
 
   def destroy
     @record = Record.find(params[:id])
-    @scientist = @record.scientist
-    # @record.destroy
-    redirect_to scientist_records_path(@scientist)
+    # @scientist = @record.scientist
+    @record.destroy
+    redirect_to records_path
   end
 
   private

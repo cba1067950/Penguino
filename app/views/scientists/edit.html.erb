@@ -1,11 +1,13 @@
-<h1>Edit <%= @current_scientist.name %>'s profile</h1>
+<div class="the_forms">
+  <h1>Edit <%= @current_scientist.name %>'s profile</h1>
 
-<%= form_for @current_scientist do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.label :age %>
-<%= f.number_field :age %>
-<%= f.label :bio %>
-<%= f.text_area :bio %>
-<%= f.submit "Submit Updates?" %>
-<% end %>
+  <%= form_for @current_scientist do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :age %><br>
+  <%= f.number_field :age %><br>
+  <%= f.label :bio %><br>
+  <%= f.text_area :bio %><br>
+  <%= f.submit "Submit Updates?" %>
+  <% end %>
+</div>

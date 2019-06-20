@@ -1,24 +1,26 @@
-<h1>  <%= @colony.name %> </h1>
-<p>Active: <%= @colony.active_or_not %> </p>
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), colony_path(@colony), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
+    <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_colony_path(@colony) %>
+    <%= button_to "Add Penguin", new_penguin_path, method: :get %>
+  </div>
+</div>
 
+<div class="two">
+  <h1> <%= @colony.name %> </h1>
+  <p>Status:<br><%= @colony.active_or_not %> </p>
+</div>
 
-<br>
-<h4> Penguinos</h4>
+<div class="three">
+  <h4> Penguinos</h4>
 
-<ul class="cards">
-
-  <% @penguins.each do |penguin| %>
-    <li class="card">
-      <img src="<%= penguin.image_url %>" class="peng_img">
-      <span class="peng_name"><%= link_to penguin.name, penguin %></span>
-      <span class="peng_status"><%= penguin.alive_or_dead %>
-    <li>
-  <% end %>
-</ul>
-
-<br>
-<%= button_to "Add Penguin", new_penguin_path, method: :get %>
-<br>
-
-<%= button_to "Edit #{@colony.name}", edit_colony_path(@colony), method: :get %>
-<%= button_to "Delete #{@colony.name}", @colony, method: :delete %>
+  <ul class="cards">
+    <% @penguins.each do |penguin| %>
+      <li class="card">
+        <img src="<%= penguin.image_url %>" class="peng_img">
+        <span class="peng_name"><%= link_to penguin.name, penguin %></span>
+        <span class="peng_status"><%= penguin.alive_or_dead %>
+      <li>
+    <% end %>
+  </ul>
+</div>

@@ -1,3 +1,4 @@
+<div class="the_forms">
 <!-- <h1>This is the beginning. This is where penguins start</h1> -->
 
 <% if flash[:messages] %>
@@ -9,10 +10,12 @@
     </ul>
 <% end %>
 
-<%= form_tag "/login" do %>
-<%= label_tag :username %>
-<%= text_field_tag :username %>
-<%= label_tag :password %>
-<%= password_field_tag :password %>
-<%= submit_tag "LOGIN" %>
-<% end %>
+<h1>New User</h1>
+  <%= form_tag "/login", class:"new_login" do %>
+  <%= label_tag :username %><br>
+  <%= text_field_tag :username %><br>
+  <%= label_tag :password %><br>
+  <%= password_field_tag :password %><br>
+  <%= submit_tag "LOGIN" %>
+  <% end %>
+</div>

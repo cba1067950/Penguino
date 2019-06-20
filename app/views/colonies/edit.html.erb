@@ -1,9 +1,11 @@
-<h1>Edit <%= @colony.name %></h1>
+<div class="the_forms">
+  <h1>Edit <%= @colony.name %></h1>
 
-<p>
-  <%= form_for @colony do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-  <% end %>
-</p>
+  <p>
+    <%= form_for @colony do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.submit %>
+    <% end %>
+  </p>
+</div>

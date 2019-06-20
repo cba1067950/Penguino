@@ -1,19 +1,21 @@
-<h1>Edit <%= @penguin.name %></h1>
+<div class="the_forms">
+  <h1>Edit <%= @penguin.name %></h1>
 
-<p>
-  <%= form_for @penguin do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :temp, "Temperament" %>
-  <%= f.text_field :temp %>
-  <%= f.label :colony_id %>
-  <%= f.collection_select :colony_id, @colonies, :id, :name %>
-  <%= f.label :alive %>
-  <%= f.check_box :alive %>
-  <%= f.label :species  %>
-  <%= f.text_field :species %>
-  <%= f.submit %>
-  <% end %>
-</p>
+  <p>
+    <%= form_for @penguin do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :temp, "Temperament" %><br>
+    <%= f.text_field :temp %><br>
+    <%= f.label :colony_id %><br>
+    <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
+    <%= f.label :alive %><br>
+    <%= f.check_box :alive %><br>
+    <%= f.label :species  %><br>
+    <%= f.text_field :species %><br>
+    <%= f.submit %>
+    <% end %>
+  </p>
+</div>
