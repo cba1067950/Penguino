@@ -49,7 +49,7 @@ header {
   justify-content: flex-end;
   background-color: #111111;
   align-items: center;
-  padding: 13px 10% 0px 10%;
+  padding: 13px 10% 10px 10%;
 
 }
 
@@ -105,18 +105,22 @@ button:hover {
 .background {
   padding: 0;
   margin: 0;
-  // background-repeat: no-repeat;
-  // background-position: bottom;
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  top: 0px;
-  position: sticky;
-  background-image: url("bg3.jpeg");
+}
+
+.background::after {
+  content: "";
+  background: url("bg1.png");
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  z-index: -1;
 }
 
 .container {
@@ -141,15 +145,25 @@ button:hover {
   flex-direction: column;
   // align: left;
   // padding: 10px;
-  margin: 0px 10px;
+  margin: 20px;
 }
 .two {
   // background: blue;
   padding: 20px;
   margin: 0px 20px;
   width: auto;
-  border-style: solid;
+  // border-style: solid;
 }
+
+.profile_pic {
+  width: 300px;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  // border-style: solid;
+  // border-width: medium;
+  // height: 300px;
+}
+
 .three {
   // background: green;
   padding: 10px 30px;
@@ -170,10 +184,6 @@ button:hover {
   // transform: translateY(-50%);
 }
 
-.profile_pic {
-  width: 300px;
-  height: 300px;
-}
 
 .icon-bar a {
   order: 1;
@@ -206,6 +216,10 @@ button:hover {
   // background: #4679BD;
   // background: transparent;
   // background-image: url("/assets/edit_guin1-de3bf222eae68061f244a84da321239a6ea18cfcec4712005802a04bb7e0f7ed.png");
+}
+
+.profile_ul {
+  list-style: none;
 }
 
 .profile {
