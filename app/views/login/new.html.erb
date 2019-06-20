@@ -1,7 +1,12 @@
 <!-- <h1>This is the beginning. This is where penguins start</h1> -->
 
 <% if flash[:messages] %>
-  <%= flash[:messages] %>
+  <h5> (｡•́ ⌔ •̀｡) Oh no...  </h5>
+    <ul>
+        <li>
+          <%= flash[:messages] %>
+        </li>
+    </ul>
 <% end %>
 
 <%= form_tag "/login" do %>
