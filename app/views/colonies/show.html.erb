@@ -15,8 +15,10 @@
     <li>
   <% end %>
 </ul>
-<br>
 
+<br>
+<%= button_to "Add Penguin", new_penguin_path, method: :get %>
+<br>
 
 <%= button_to "Edit #{@colony.name}", edit_colony_path(@colony), method: :get %>
 <%= button_to "Delete #{@colony.name}", @colony, method: :delete %>
