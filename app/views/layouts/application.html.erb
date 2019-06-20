@@ -10,17 +10,32 @@
   </head>
 
   <body>
-    <div class='container'>
-      <!-- <p align="center"><%= image_tag "guin.jpg", class: "guin_logo" %></p> -->
-      <!-- <h1 align='center' style='font-size:3rem;color:#6666DD'>Penguino</h1> -->
 
-      <% if @current_scientist %>
-        <%= "Logged in as #{@current_scientist.username}" %>
-        <%= button_to "log out yo",logout_path, method: :get  %>
-      <% end %>
+      <header >
+        <a href="#" class="logo_link">
+          <%= image_tag "guin.jpg", class: "guin_logo" %>
+          <% if @current_scientist %>
+            <%= "Logged in as #{@current_scientist.username}" %>
+          <% end %>
+        </a>
 
+        <nav>
+          <ul class="nav_links">
+            <li><a href="#">Profile</a>  </li>
+            <li><a href="#">Records</a>  </li>
+            <li><a href="#">Colony</a>  </li>
+            <li><a href="#">Penguins</a>  </li>
+            <%# <%= button_to "log out yo",logout_path, method: :get  %>
+            <a href="#"> <button type="button" name="button"> Log Out </button>  </a>
+          </ul>
+        </nav>
+    </header>
 
-      <%= yield %>
+    <div class="background">
+      <div class='container'>
+        <%= yield %>
+      </div>
     </div>
+
   </body>
 </html>

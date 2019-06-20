@@ -1,18 +1,56 @@
-<h1> <%= @penguin.name %> </h1>
+<div class="one">
+  <div class="icon-bar">
+    <%= link_to "delete", {method: :delete} do %>
+      <%= image_tag(('delete_guin1.png'), :class => "edit_btn") %>
+    <% end %>
+    <%= link_to "edit", {method: :get} do %>
+      <%= image_tag(('edit_guin1.png'), :class => "edit_btn") %>
+    <% end %>
+  </div>
+</div>
 
-<div class="" style="background-image: url("adam_penguin.jpeg")>
+<div class="two">
+  <%= image_tag(('guin.jpg'), :class => "profile_pic") %>
+</div>
 
+<div class="three">
+  <h1> <%= @penguin.name %> </h1>
+  <br>
+  <ul> About Me
+    <li>Title: <%= @penguin.title %></li>
+    <li>Temperament: <%= @penguin.temp %></li>
+    <li>Status: <%= @penguin.alive_or_dead %></li>
+    <li>Species: <%= @penguin.species %></li>
+    <li>Colony: <%= link_to @penguin.colony.name, @penguin.colony %> </li>
+  </ul>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
 
-<br>
-<ul> About Me
-  <li>Title: <%= @penguin.title %></li>
-  <li>Temperament: <%= @penguin.temp %></li>
-  <li>Status: <%= @penguin.alive_or_dead %></li>
-  <li>Species: <%= @penguin.species %></li>
-  <li>Colony: <%= link_to @penguin.colony.name, @penguin.colony %> </li>
-</ul>
-
-<%= button_to "Edit #{@penguin.name}", edit_penguin_path(@penguin), method: :get %>
-<%= button_to "Delete #{@penguin.name}", @penguin, method: :delete %>
-
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  v
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  <p>sdfadsf</p>
+  v
+  <p>sdfadsf</p>
 </div>
