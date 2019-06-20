@@ -13,21 +13,55 @@
 @import "bourbon";
 @import "base/base";
 
-.container {
-  width:1000px;
-  margin:auto;
-  margin-top:50px;
+.peng_img {
+  text-align: center;
+  height: auto;
+  width: auto;
+  max-height: 100px;
 }
 
-.form-container {
-  width:500px;
+.cards {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  // flex-wrap: wrap;
+  align-content: space-around;
 }
 
-.guin_logo {
-  width: 100px;
-  -webkit-animation: spin 5s infinite linear;
-  @-webkit-keyframes spin {
-    0%   {-webkit-transform: rotate(0deg)}
-    100% {-webkit-transform: rotate(360deg)}
-  }
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  border-style: double;
+  background-color: #f1f1f1;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+  // min-width: 80px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+}
+
+.peng_name {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: normal;
+  display: block;
+  margin-top: 10px;
+  vertical-align: middle;
+}
+
+span.peng_name a {
+  text-decoration: none;
+}
+
+span.peng_name a:hover {
+  color: red;
+}
+
+span.peng_status {
+  font-family: monospace;
+  font-size: 10px;
 }
