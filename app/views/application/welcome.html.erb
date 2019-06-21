@@ -3,6 +3,9 @@
     <h1>Penguino</h1>
   </div>
 
+<br>
+  <h5>Click on a penguin to enter!</h5>
+
   <% if flash[:messages] %>
     <h5> (｡•́ ⌔ •̀｡) Oh no...  </h5>
       <ul>
@@ -13,12 +16,12 @@
   <% end %>
 
 <div class="welcome_bttn">
-  <%= link_to image_tag('thumbnail.png'), new_login_path %>
-  <%= link_to image_tag('bb_penguin.png'), new_scientist_path %>
-  <!-- <div class="welcome_bttn">
-    <div class="loginl_label"><p>Login</p></div>
+  <%= link_to image_tag(('thumbnail.png'), class: "mama"), new_login_path %>
+  <%= link_to image_tag(('bb_penguin.png'), class: "baby"), new_scientist_path %>
+  <div class="welcome_bttn">
+    <div class="login_label"><p>Login</p></div>
     <div class="register_label"><p>New User</p></div>
-  </div> -->
+  </div>
 </div>
 
 

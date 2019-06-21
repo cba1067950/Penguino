@@ -10,7 +10,7 @@
   <body>
     <% if @current_scientist %>
       <header >
-        <a href="#" class="logo_link">
+        <a href=" <%= creation_path %> " class="logo_link">
           <%= image_tag "penguin_logo.jpg", class: "guin_logo" %>
             <%= "Logged in as #{@current_scientist.username}" %>
         </a>

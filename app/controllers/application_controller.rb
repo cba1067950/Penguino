@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   def welcome
   end
 
+  def creation
+  end
+
   def find_scientist
     @scientist_id = session[:scientist_id]
     @logged_in = !!@scientist_id

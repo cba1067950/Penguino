@@ -53,6 +53,12 @@ h4 {
   font-size: 50px;
 }
 
+h5 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 12px;
+}
+
 p {
   text-align: left;
   margin-left: 40px;
@@ -62,18 +68,24 @@ p {
 .welcome_bttn {
   zoom: 0.7;
   position: relative;
-  text-align: center;
   padding-top: 70px;
 }
 
+.mama, .baby {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+ filter: drop-shadow(5px 5px 5px #222);
+}
+
+
 .login_label {
   position: absolute;
-  bottom: -10px;
+  margin-left: 90px;
+  padding: 0;
 }
 
 .register_label{
   position: absolute;
-  bottom: 10px;
+  // bottom: 3px;
   right: 110px;
 }
 
@@ -90,10 +102,23 @@ p {
   font-size: 30px;
 }
 
+.peng_profile_2:hover {
+  color: red;
+}
+
 .the_errors {
   list-style: none;
   font-size: 12px;
   zoom: 0.9;
+}
+
+.adam_box {
+  zoom: 1;
+  margin: auto;
+}
+
+.adam:hover {
+  box-shadow: 2px 7px 18px yellow;
 }
 
 .logo_link {
