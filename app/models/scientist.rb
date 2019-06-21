@@ -8,12 +8,10 @@ class Scientist < ApplicationRecord
   validates :bio, presence: true
   validates :username, presence: true, uniqueness: true
 
-  # def hungry_pengs
-  #   byebug
-  #   @colonies = self.colonies
-  #   @pengs = @colonies.select {|colony| colony.penguins}
-  #   @pengs.select {|p| p.hungry? > 1}
-  #   byebug
-  # end
+  def hungry_pengs
+    @colonies = self.colonies
+    @pengs = @colonies.map {|colony| colony.penguins}.flatten
+    @pengs.select {|p| p.hungry? > 1}
+  end
 
 end

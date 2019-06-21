@@ -25,11 +25,21 @@
           </ul>
         </nav>
       </header>
+
+      <% if @current_scientist.hungry_pengs %>
+      <h3>PLEASE FEED THEM:</h3>
+      <% @current_scientist.hungry_pengs.each do |peng| %>
+      <ul>
+        <li>
+          <%= peng.name %>
+        </li>
+      </ul>
+      <% end  %>
+    <% end %>
     <% end %>
     <div class="background">
       <div class='container'>
 
-      
         <%= yield %>
       </div>
     </div>
