@@ -45,6 +45,14 @@ class PenguinsController < ApplicationController
     redirect_to colony_path(colony)
   end
 
+  def feed_penguin
+    # byebug
+    penguin = Penguin.find(params[:id])
+    penguin.fish_counter
+    penguin.update(fish: penguin.fish)
+    redirect_to penguin
+  end
+
   private
 
   def edit_strong_params
