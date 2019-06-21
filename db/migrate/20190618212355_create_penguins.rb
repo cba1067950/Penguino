@@ -8,6 +8,7 @@ class CreatePenguins < ActiveRecord::Migration[5.2]
       t.boolean :alive
       t.string :species
       t.integer :colony_id
+      t.integer :fish, default: 0
       t.timestamps
     end
   end

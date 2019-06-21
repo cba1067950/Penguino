@@ -3,6 +3,11 @@
     <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), penguin_path(@penguin), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
     <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_penguin_path(@penguin) %>
     <%= link_to image_tag(('create_guin1.png'), :class => "edit_btn"), new_penguin_path %>
+
+    <% if @penguin.alive == true %>
+      <%= link_to image_tag(('fishy.gif'), :class => "edit_btn"), feeding_path(@penguin), method: :patch%>
+    <% end  %>
+    
   </div>
 </div>
 
@@ -25,6 +30,11 @@
 
     <h4>Species</h4>
     <p><%= @penguin.species %></p>
+
+    <% if @penguin.alive == true %>
+      <h4>Fishes Eaten</h4>
+      <p><%= @penguin.fish %></p>
+    <% end %>
 
     <h4>Colony</h4>
     <p><%= link_to  @penguin.colony.name, @penguin.colony, class:"peng_profile_2"%></p>

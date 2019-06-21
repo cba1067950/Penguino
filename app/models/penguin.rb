@@ -45,4 +45,8 @@ class Penguin < ApplicationRecord
     self.image_url = image_array.sample
   end
 
+  def fish_counter
+    self.fish += 1
+  end
+
 end

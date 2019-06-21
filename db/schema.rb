@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_212454) do
     t.boolean "alive"
     t.string "species"
     t.integer "colony_id"
+    t.integer "fish", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
