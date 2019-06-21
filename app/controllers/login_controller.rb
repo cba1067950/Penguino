@@ -17,7 +17,7 @@ class LoginController < ApplicationController
 
   def destroy
     logout
-    redirect_to welcome_path
+    redirect_to root_path
   end
 
 end

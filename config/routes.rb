@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :colonies
   resources :scientists
   resources :login, only: [:new, :create]
-  get '/welcome', to: 'application#welcome'
+  root to: 'application#welcome'
   get '/login', to: 'login#destroy', as: 'logout'
 
 

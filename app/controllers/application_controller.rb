@@ -11,8 +11,8 @@ class ApplicationController < ActionController::Base
       @current_scientist = Scientist.find(@scientist_id)
       @records = @current_scientist.records
     else
-      flash[:errors] = "Log in brah"
-      redirect_to '/welcome'
+      flash[:messages] = "You need to be logged in!"
+      redirect_to root_path
     end
   end
 

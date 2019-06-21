@@ -58,6 +58,28 @@ p {
   font-size: 30px;
 }
 
+.welcome_bttn {
+  zoom: 0.7;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.login_label {
+  position: absolute;
+  bottom: -10px;
+}
+
+.register_label{
+  position: absolute;
+  bottom: 10px;
+  right: 110px;
+}
+
+.the_title {
+  text-shadow: 2px 2px 8px cyan;
+}
+
 .peng_profile {
   height: 40%;
   zoom: 0.6;
@@ -208,6 +230,15 @@ button:hover {
   // background: green;
   padding: 10px 30px;
   margin: 0px 10px;
+}
+
+.three li a {
+transition: all 0.3s ease 0s;
+color: black;
+}
+
+.three li a:hover {
+color: red;
 }
 
 .the_forms {

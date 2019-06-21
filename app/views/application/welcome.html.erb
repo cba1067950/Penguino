@@ -1,15 +1,25 @@
-<h1>HELLOOO</h1>
+<div class="the_forms">
+  <div class="the_title">
+    <h1>Penguino</h1>
+  </div>
 
-<!-- <img src="https://media2.giphy.com/media/6Ek7hFsg6fhQmf8UNr/source.gif" alt="penguin" height="440" width="440">  -->
-<% if flash[:errors] %>
-  <%= flash[:errors] %>
-<% end %>
+  <% if flash[:messages] %>
+    <h5> (｡•́ ⌔ •̀｡) Oh no...  </h5>
+      <ul>
+          <li>
+            <%= flash[:messages] %>
+          </li>
+      </ul>
+  <% end %>
 
-<%= button_to "Login", new_login_path, method: :get %>
-<%= button_to "Create User", new_scientist_path, method: :get %>
+<div class="welcome_bttn">
+  <%= link_to image_tag('thumbnail.png'), new_login_path %>
+  <%= link_to image_tag('bb_penguin.png'), new_scientist_path %>
+  <!-- <div class="welcome_bttn">
+    <div class="loginl_label"><p>Login</p></div>
+    <div class="register_label"><p>New User</p></div>
+  </div> -->
+</div>
 
-<br>
-<a href="<%= new_login_path%>">
-  <img src="https://imgur.com/8tO12W1.png" alt="peng" >
-  <!-- <span>THIS IS BUTTON</span> -->
-</a>
+
+</div>
