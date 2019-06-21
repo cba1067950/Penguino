@@ -49,4 +49,9 @@ class Penguin < ApplicationRecord
     self.fish += 1
   end
 
+  def hungry?
+    time_diff = Time.now - self.updated_at
+    (time_diff / 1.minute).round
+  end
+
 end

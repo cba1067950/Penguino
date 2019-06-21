@@ -7,7 +7,7 @@
     <% if @penguin.alive == true %>
       <%= link_to image_tag(('fishy.gif'), :class => "edit_btn"), feeding_path(@penguin), method: :patch%>
     <% end  %>
-    
+
   </div>
 </div>
 
@@ -35,6 +35,11 @@
       <h4>Fishes Eaten</h4>
       <p><%= @penguin.fish %></p>
     <% end %>
+
+    <% if @penguin.hungry? > 1 && @penguin.alive == true%>
+      <h4>Hunger</h4>
+      <p>Please feed me 🐠 !</p>
+    <% end  %>
 
     <h4>Colony</h4>
     <p><%= link_to  @penguin.colony.name, @penguin.colony, class:"peng_profile_2"%></p>

@@ -7,4 +7,13 @@ class Scientist < ApplicationRecord
   validates :age, presence: true
   validates :bio, presence: true
   validates :username, presence: true, uniqueness: true
+
+  # def hungry_pengs
+  #   byebug
+  #   @colonies = self.colonies
+  #   @pengs = @colonies.select {|colony| colony.penguins}
+  #   @pengs.select {|p| p.hungry? > 1}
+  #   byebug
+  # end
+
 end

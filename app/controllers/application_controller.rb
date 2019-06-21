@@ -23,4 +23,8 @@ class ApplicationController < ActionController::Base
     session[:scientist_id] = nil
   end
 
+  # def pop_up
+  #   @the_pengs = @current_scientist.hungry_pengs
+  # end
+
 end
