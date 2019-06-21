@@ -17,7 +17,6 @@ class PenguinsController < ApplicationController
 
   def create
     penguin = Penguin.create(penguin_params)
-    byebug
     if penguin.valid?
       penguin.update(image_url: penguin.assign_image)
       redirect_to penguin

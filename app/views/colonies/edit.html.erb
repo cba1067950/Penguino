@@ -5,6 +5,8 @@
     <%= form_for @colony do |f| %>
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
+    <%= f.label :active %><br>
+    <%= f.check_box :active, class: "checker" %><br>
     <%= f.submit %>
     <% end %>
   </p>
