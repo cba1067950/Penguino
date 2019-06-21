@@ -2,6 +2,7 @@
   <div class="icon-bar">
     <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), penguin_path(@penguin), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
     <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_penguin_path(@penguin) %>
+    <%= link_to image_tag(('create_guin1.png'), :class => "edit_btn"), new_penguin_path %>
   </div>
 </div>
 

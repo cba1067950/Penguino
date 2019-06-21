@@ -36,6 +36,7 @@ li, a, button {
   font-size: 16px;
   color: #111111;
   text-decoration: none;
+  list-style: none;
 }
 
 h1, h4, p {
@@ -166,7 +167,8 @@ button:hover {
 }
 
 .guin_logo {
-  width: 20px;
+  width: 30px;
+  border-radius: 50px;
   // -webkit-animation: spin 5s infinite linear;
   // @-webkit-keyframes spin {
   //   0%   {-webkit-transform: rotate(0deg)}
@@ -230,11 +232,26 @@ font-family: monospace;
 font-size: x-large;
 }
 
-input {
+input, textarea, select  {
   height: 40px;
+  width: 378px;
   font-size: 30px;
   font-family: monospace;
   margin: 10px 0px;
+  border-radius: 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #BBBBBB;
+  background-color: #EEEEEE;
+}
+
+// input {
+  // height: 50px;
+  // border-radius: 20px;
+// }
+
+textarea {
+  height: 140px;
 }
 
 // This fixes the buttons to the top
@@ -268,21 +285,33 @@ input {
 .icon-bar a:hover {
   box-shadow: 0 8px 20px 0;
   background: transparent;
-
 }
 
 .edit_btn {
   width: 100px;
+  vertical-align: middle;
+  // margin-bottom: -4px;
+  margin: 2px;
+  // padding: 1px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  // transition: all 0.3s ease 0s;
   // height: 100%;
   // padding: 185px 186px 184px;
-  // border-style: none;
   // object-fit: scale-down;
-  // border-radius: 50%;
   // text-rendering: auto;
   // overflow:hidden;
   // background: #4679BD;
   // background: transparent;
   // background-image: url("/assets/edit_guin1-de3bf222eae68061f244a84da321239a6ea18cfcec4712005802a04bb7e0f7ed.png");
+}
+
+// .edit_btn:hover {
+//   box-shadow: 0 8px 10px 0;
+// }
+.checker {
+  width: 24px;
 }
 
 .profile_ul {

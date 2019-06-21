@@ -2,7 +2,7 @@
   <div class="icon-bar">
     <%= link_to image_tag(('delete_guin1.png'), :class => "edit_btn"), colony_path(@colony), {method: :delete, data: { confirm: '(｡•́︿•̀｡) Are you sure?'} }%>
     <%= link_to image_tag(('edit_guin1.png'), :class => "edit_btn"), edit_colony_path(@colony) %>
-    <%= button_to "Add Penguin", new_penguin_path, method: :get %>
+    <%= link_to image_tag(('create_guin1.png'), :class => "edit_btn"), new_colony_path %>
   </div>
 </div>
 

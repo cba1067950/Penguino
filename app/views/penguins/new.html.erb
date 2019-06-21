@@ -23,13 +23,13 @@
     <%= f.text_field :temp %><br>
     <br>
   <%= f.label "Alive" %><br>
-    <%= f.check_box :alive %><br>
-    <br>
-  <%= f.label "Species" %><br>
-    <%= f.text_field :species %><br>
+    <%= f.check_box :alive, class: "checker" %><br>
     <br>
   <%= f.label "Colony" %><br>
     <%= f.collection_select :colony_id, @colonies, :id, :name %><br>
+    <br>
+  <%= f.label "Species" %><br>
+    <%= f.text_field :species %><br>
   <%= f.submit %>
   <% end  %>
 </div>
